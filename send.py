@@ -1,34 +1,31 @@
-from py_imessage import imessage
 from time import sleep
+from py_imessage import imessage
+from num import num
 
+# Get words from lyrics text
 def get_lyrics():
     with open('lyrics.txt') as file:
-        # combine all of the lines as strings, into list
         list = [line.strip() for line in file]
-        # combine list items into string, with space in between
-        s = " ".join(list) 
-        return s
+        string = " ".join(list)
+        return string
 
+# Turn text into list of words
 def get_words(lyrics_str):
-    return lyrics_str.split();
+    return lyrics_str.split()
 
-def send_messages(messages, phoneNum):
+# Loop through words
+def send_messages(phone_number, messages):
     for message in messages:
-        print("Message: ", message)
-        send_message(message, phoneNum)
+        send_message(phone_number, message)
         sleep(.5)
 
-def send_message(message, phoneNum):
-    imessage.send(phoneNum, message)
+# Function to Send message 
+# Open iMessage Client (or use SMS API)
+def send_message(phone_number, message):
+    imessage.send(phone_number, message)
 
 def get_lyrics_and_send_messages(phone_number, lyrics):
     words_list = get_words(lyrics)
-    print("WORDS LIST: ", words_list)
-    send_messages(words_list, phone_number)
-
-# num = "2077103138"
-# num = "2075908513"
-num = "2077103138"
+    send_messages(phone_number, words_list)
 
 get_lyrics_and_send_messages(num, get_lyrics())
-# print(get_lyrics())
