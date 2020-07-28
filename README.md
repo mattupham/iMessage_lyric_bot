@@ -16,9 +16,10 @@ These instructions will get you a copy of the project up and running on your loc
 ### Instructions
 
 1. Watch this [Youtube Video](https://youtu.be/wEkkZBY2Ja4) first!
-2. Add a phone number (as a string) to `num.py`
-3. Run the `send.py` file with Python
-4. Improve this repo, and DM me on [Discord](https://discord.gg/9RGdMcF), [TikTok](https://www.tiktok.com/@mattupham), or [Instagram](https://instagram.com/mattupham), and I'll feature you in a future video!
+2. Complete the Prerequisites and Installing sections below
+3. Add a phone number (as a string) to `num.py`
+4. Run the `send.py` file with Python
+5. Improve this repo, and DM me on [Discord](https://discord.gg/9RGdMcF), [TikTok](https://www.tiktok.com/@mattupham), or [Instagram](https://instagram.com/mattupham), and I'll feature you in a future video!
 
 <br>
 
@@ -29,6 +30,11 @@ Install [Python3](https://www.python.org/downloads/)
 Install [Pip and virtualenv](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments)
 
 Install [Pipenv](https://pypi.org/project/pipenv/)
+
+Give terminal "full disk access" on Mac for py-imessage to work: \
+System Preferences -> Security & Privacy -> Privacy -> Full Disk Access -> + -> Click Terminal\
+You'll receive this error once you run the final script if you don't: \
+ `sqlite3.OperationalError: unable to open database file`
 
 <br>
 
